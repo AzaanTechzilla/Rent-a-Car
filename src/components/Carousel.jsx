@@ -19,9 +19,9 @@ const CarouselComponent = () => {
   return (
     <>
       <Carousel   plugins={[
-        Autoplay({
-          delay: 2000,
-        }),
+        // Autoplay({
+        //   delay: 2000,
+        // }),
       ]}>
       
         <CarouselContent>
@@ -48,8 +48,6 @@ const CarouselComponent = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
       </Carousel>
     </>
   );
