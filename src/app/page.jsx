@@ -1,6 +1,6 @@
 import CallToAction from "@/components/CallToAction";
 import CarouselComponent from "@/components/Carousel";
-import Explore from "@/components/ExploreSection/Explore";
+import Explore from "@/components/explore/Explore";
 import OurObjective from "@/components/OurObjective";
 import Image from "next/image";
 
