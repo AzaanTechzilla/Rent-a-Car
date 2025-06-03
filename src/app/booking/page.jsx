@@ -1,10 +1,11 @@
-'use client'
+'use client';
 import { steps } from "@/constants/appdata";
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import StepOne from "@/components/booking/StepOne";
+import { useRouter } from "next/navigation";
 const Booking = () => {
     const searchParams = useSearchParams();
     const current = Number(searchParams.get('index')) || 1;
@@ -37,7 +38,9 @@ const Booking = () => {
           ))}
         </div>
       </div>
+      <Suspense>
       {current === 1 && <StepOne form={form} /> }
+      </Suspense>
       <div className={`${current === 4 ? 'hidden': 'flex'} justify-between items-center mx-10 py-3`}>
         <button className="bg-slate-100 px-10 py-3 rounded-full">Back</button>
         <Link href={`/booking?index=${current + 1 }`} className={`bg-third-color text-white px-10 py-3 rounded-full`}>Next</Link>

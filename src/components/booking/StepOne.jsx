@@ -12,7 +12,8 @@ const StepOne = ({ form }) => {
   const [getSource, setSource] = useState(null);
   const [getDestination, setDestination] = useState(null);
 
-  const Map = dynamic(() => import("@/components/booking/Map"), {
+  const Map = dynamic(() => import("./Map"), {
+    ssr: false,
     loading: () => <p>Loading map...</p>,
   });
   [getSource, getDestination];
