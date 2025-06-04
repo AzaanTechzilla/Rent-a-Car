@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { format } from "date-fns";
+// import { format } from "date-fns";
 import {
   FormControl,
   FormField,
@@ -39,7 +39,7 @@ const DateTimeForm = ({ control, id, label }) => {
                     )}
                   >
                     {field.value ? (
-                      format(field.value, "PPP")
+                      field.value, "PPP"
                     ) : (
                       <span>Pick a date</span>
                     )}
